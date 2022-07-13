@@ -1,0 +1,720 @@
+{%- if test == "cpu_idle_state"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because the CPU Idle State Is At {{ resource }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} because the CPU Idle State Is At {{ resource }}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "CPU Idle State",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ resource }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show System Resources command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20version.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "current_memory_status"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because the current memory status is {{ resource }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} because the current memory status is {{ resource }}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Memory Status",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ resource }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show System Resources command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20version.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "15_minute_load_average"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because the 15 Minute Average Load is {{ resource }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} because the 15 minute average load is {{ resource }}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "15 Minute Average Load",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ resource }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show System Resources command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20version.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "5_minute_load_average"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because the 5 Minute Average Load is {{ resource }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} because the 5 minute average load is {{ resource }}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "5 Minute Average Load",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ resource }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show System Resources command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20version.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "1_minute_load_average"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because the 1 Minute Average Load is {{ resource }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} because the 1 minute average load is {{ resource }}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "15 Minute Average Load",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ resource }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show System Resources command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20version.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}
