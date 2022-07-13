@@ -70,6 +70,16 @@ class common_setup(aetest.CommonSetup):
         return(show_interface)
 
     @aetest.subsection
+    def get_dir(self):
+        g = Github(USERNAME, TOKEN)
+        repo = g.get_user().get_repo(REPO_NAME)
+        for item in repo.get_contents("JSON"):
+            raw_json_content = item.decoded_content
+            if "dir" in item.name:
+                dir = raw_json_content
+        return(dir)
+
+    @aetest.subsection
     def prepare_testcases(self):
         aetest.loop.mark(Interface_Errors_Count_Check, self.hostname)
 
@@ -325,7 +335,7 @@ class Resource_Check(aetest.Testcase):
             table_row.append(self.cpu_state)
             if self.minute_average >= minute_average_threshold:
                 table_row.append('Failed')
-                self.failed_minute_average = self.minute_average
+                self.failed_15_minute_average = self.minute_average
             else:
                 table_row.append('Passed')
         else:
@@ -341,7 +351,7 @@ class Resource_Check(aetest.Testcase):
                           tablefmt='orgtbl'))
 
         # should we pass or fail?
-        if self.failed_minute_average:
+        if self.failed_15_minute_average:
             self.failed_fifteen_minute_average_status_check()
             if WEBEX_ROOM:
                 self.failed_fifteen_minute_average_webex()
@@ -477,6 +487,182 @@ class Resource_Check(aetest.Testcase):
             env = Environment(loader=FileSystemLoader(str(template_dir)))
             adaptive_card_template = env.get_template('failed_system_resources_adaptive_card.j2')
             adataptive_card_output = adaptive_card_template.render(roomid = WEBEX_ROOM, hostname=self.hostname, resource=self.minute_average, test="1_minute_load_average")
+            webex_adaptive_card_response = requests.post('https://webexapis.com/v1/messages', data=adataptive_card_output, headers={"Content-Type": "application/json", "Authorization": f"Bearer { WEBEX_TOKEN }" })
+            log.info('The POST to WebEx had a response code of ' + str(webex_adaptive_card_response.status_code) + 'due to' + webex_adaptive_card_response.reason)
+
+    # Test for memory percentage
+    @aetest.test
+    def memory_percentage(self, memory_percentage_threshold = 85):
+        table_data = []
+        self.failed_memory_percentage = 0
+        json_system_resources = json.loads(self.system_resources)
+        self.memory_usage_total = int(json_system_resources['memory_usage_total'])
+        self.memory_usage_used = int(json_system_resources['memory_usage_used'])
+        self.memory_percentage_value = self.memory_usage_used / self.memory_usage_total * 100
+        if self.memory_percentage_value != 0:
+            table_row = []
+            table_row.append(self.hostname)
+            table_row.append(self.cpu_state)
+            if self.memory_percentage_value >= memory_percentage_threshold:
+                table_row.append('Failed')
+                self.failed_memory_percentage = self.memory_percentage_value
+            else:
+                table_row.append('Passed')
+        else:
+            table_row.append(self.hostname)
+            table_row.append('N/A')
+            table_row.append('N/A')
+        table_data.append(table_row)
+ 
+        # display the table
+        log.info(tabulate(table_data,
+                          headers=['Device','Memory Percentage',
+                                   'Passed/Failed'],
+                          tablefmt='orgtbl'))
+
+        # should we pass or fail?
+        if self.failed_memory_percentage:
+            self.failed_memory_percentage_check()
+            if WEBEX_ROOM:
+                self.failed_memory_percentage_webex()
+            self.failed('The Current Available Memory is Less Than 85%')
+        else:
+            self.passed('The Current Available Memory is Greater Than 85%')
+ 
+    @aetest.test
+    def failed_memory_percentage_check(self, memory_percentage_threshold = 85):
+        if self.failed_memory_percentage <= memory_percentage_threshold:
+            self.skipped('The Current Available Memory is Less Than 85%')
+        else:
+            self.failed(f'The Current Available Memory is { self.minute_average }% (threshold { memory_percentage_threshold }')
+
+    @aetest.test
+    def failed_memory_percentage_webex(self, memory_percentage_threshold = 85):
+        if self.failed_memory_percentage <= memory_percentage_threshold:
+           self.skipped('The Current Available Memory is Less Than 85%')
+        else:
+            template_dir = Path(__file__).resolve().parent
+            env = Environment(loader=FileSystemLoader(str(template_dir)))
+            adaptive_card_template = env.get_template('failed_system_resources_adaptive_card.j2')
+            adataptive_card_output = adaptive_card_template.render(roomid = WEBEX_ROOM, hostname=self.hostname, resource=self.minute_average, test="memory_percentage")
+            webex_adaptive_card_response = requests.post('https://webexapis.com/v1/messages', data=adataptive_card_output, headers={"Content-Type": "application/json", "Authorization": f"Bearer { WEBEX_TOKEN }" })
+            log.info('The POST to WebEx had a response code of ' + str(webex_adaptive_card_response.status_code) + 'due to' + webex_adaptive_card_response.reason)
+
+class Directory_Check(aetest.Testcase):
+    @aetest.setup
+    def setup(self):
+        self.directory_info = common_setup.get_dir(self)
+        self.hostname = common_setup.get_hostname(self)
+
+    # Test for free diskspace
+    @aetest.test
+    def free_diskspace(self, free_diskspace_threshold = 85):
+        table_data = []
+        self.failed_free_diskspace = 0
+        json_version = json.loads(self.directory_info)
+        self.total_diskspace = int(json_version['bytestotal'])
+        self.used_diskspace = int(json_version['bytesused'])
+        self.diskpace_percentage_value = self.used_diskspace / self.total_diskspace * 100
+        if self.diskpace_percentage_value:
+            table_row = []
+            table_row.append(self.hostname)
+            table_row.append(self.diskpace_percentage_value)
+            if self.diskpace_percentage_value >= free_diskspace_threshold:
+                table_row.append('Failed')
+                self.failed_free_diskspace = self.diskpace_percentage_value
+            else:
+                table_row.append('Passed')
+        else:
+            table_row.append(self.hostname)
+            table_row.append('N/A')
+            table_row.append('N/A')
+        table_data.append(table_row)
+ 
+        # display the table
+        log.info(tabulate(table_data,
+                          headers=['Device','Diskspace Used Percentage',
+                                   'Passed/Failed'],
+                          tablefmt='orgtbl'))
+
+        # should we pass or fail?
+        if self.failed_free_diskspace != 0:
+            self.failed_free_diskspace_check()
+            if WEBEX_ROOM:
+                self.failed_free_diskspace_webex()
+            self.failed('The free diskspace is less than 85%')
+        else:
+            self.passed('The free diskspace is greater than 85%')
+ 
+    @aetest.test
+    def failed_free_diskspace_check(self, free_diskspace_threshold = 85):
+        if self.failed_free_diskspace <= free_diskspace_threshold:
+            self.skipped('The free diskspace is greater than 85%')
+        else:
+            self.failed(f'The free diskspace percentage is { self.failed_free_diskspace } (threshold { free_diskspace_threshold }')
+
+    @aetest.test
+    def failed_free_diskspace_webex(self, free_diskspace_threshold = 85):
+        if self.failed_free_diskspace <= free_diskspace_threshold:
+           self.skipped('The free diskspace is greater than 85%')
+        else:
+            template_dir = Path(__file__).resolve().parent
+            env = Environment(loader=FileSystemLoader(str(template_dir)))
+            adaptive_card_template = env.get_template('failed_dir_adaptive_card.j2')
+            adataptive_card_output = adaptive_card_template.render(roomid = WEBEX_ROOM, hostname=self.hostname, diskspace=self.failed_free_diskspace, test="diskspace")
+            webex_adaptive_card_response = requests.post('https://webexapis.com/v1/messages', data=adataptive_card_output, headers={"Content-Type": "application/json", "Authorization": f"Bearer { WEBEX_TOKEN }" })
+            log.info('The POST to WebEx had a response code of ' + str(webex_adaptive_card_response.status_code) + 'due to' + webex_adaptive_card_response.reason)
+
+    # Test for bin file
+    @aetest.test
+    def directory_has_bin_file(self, bin_file_threshold = "nxos.9.3.8.bin"):
+        table_data = []
+        self.file_list = []
+        json_interfaces = json.loads(self.directory_info)
+        for item in json_interfaces['TABLE_dir']['ROW_dir']:
+            if 'fname' in item:
+                self.file_list.append(item['fname'])
+        for file in self.file_list:
+            if file:
+                table_row = []
+                table_row.append(self.hostname)
+                table_row.append(file)
+                if file == bin_file_threshold:                
+                    table_row.append('Passed')
+                else:
+                    table_row.append('Failed')
+            table_data.append(table_row)
+ 
+        # display the table
+        log.info(tabulate(table_data,
+                          headers=['Device', 'Bin File',
+                                   'Passed/Failed'],
+                          tablefmt='orgtbl'))
+
+        # should we pass or fail?
+        if bin_file_threshold not in self.file_list:
+            self.failed_bin_check()
+            if WEBEX_ROOM:
+                self.failed_bin_webex()
+            self.failed('Missing golden image')
+        else:
+            self.passed('Golden Image Present')
+ 
+    @aetest.test
+    def failed_bin_check(self, bin_file_threshold = "nxos.9.3.8.bin"):
+        if bin_file_threshold in self.file_list:
+            self.skipped('Golden Image Present')
+        else:
+            self.failed(f'The image file { bin_file_threshold } is not present in bootflash')
+
+    @aetest.test
+    def failed_bin_webex(self, bin_file_threshold = "nxos.9.3.8.bin"):
+        if bin_file_threshold in self.file_list:
+            self.skipped('Golden Image Present')
+        else:
+            template_dir = Path(__file__).resolve().parent
+            env = Environment(loader=FileSystemLoader(str(template_dir)))
+            adaptive_card_template = env.get_template('failed_dir_adaptive_card.j2')
+            adataptive_card_output = adaptive_card_template.render(roomid = WEBEX_ROOM, hostname=self.hostname, bin_file=bin_file_threshold, test="bin_file")
             webex_adaptive_card_response = requests.post('https://webexapis.com/v1/messages', data=adataptive_card_output, headers={"Content-Type": "application/json", "Authorization": f"Bearer { WEBEX_TOKEN }" })
             log.info('The POST to WebEx had a response code of ' + str(webex_adaptive_card_response.status_code) + 'due to' + webex_adaptive_card_response.reason)
 
