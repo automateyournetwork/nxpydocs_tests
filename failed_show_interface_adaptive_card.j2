@@ -1,0 +1,3542 @@
+{%- if test == "babbles" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because on {{ interface }} due to {{ failure }} babbles",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} babbles",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Babbles",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "bad_eth" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} bad ethernet",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure }} bad ethernet",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                         
+                        {
+                            "type": "TextBlock",
+                            "text": "Bad Ethernet",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface on {{ hostname }} command transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "bad_protocol" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} bad protocol",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} bad protocol",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Bad Protocol",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "collisions" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} collisions",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} collisions",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Collisions",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "crc" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} CRCs",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} CRCs",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                          
+                        {
+                            "type": "TextBlock",
+                            "text": "CRCs",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "dribble" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} dribble",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} dribble",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                           
+                        {
+                            "type": "TextBlock",
+                            "text": "Dribble",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "duplex" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} half duplex",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} half duplex",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Duplex",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "ignored" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} ignored",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} ignored",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Ignored",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "down_if_drops" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} down interface drops",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} down interface drops",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Down Interface Drops",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "input_discards" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} input discards",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} input discards",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Input Discards",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "input_errors" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} input errors",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} input errors",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Input Errors",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "input_pause" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} input pause",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} input pause",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Input Pause",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "late_collision" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} late collisions",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} late collisions",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Late Collisions",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "lost_carrier" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} lost carrier",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} lost carrier",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Lost Carrier",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "no_buffer" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} no buffer",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} no buffer",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "No Buffer",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "no_carrier" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} no carrier",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} no carrier",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "No Carrier",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "output_discard" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} output discards",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} output discards",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Output Discards",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "output_error" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} output errors",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} output errors",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Output Errors",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "output_pause" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} output pause",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} output pause",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Output Pause",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "output_overrun" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} output overrun",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} output overrun",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Output Overrun",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "runts" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} runts",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} runts",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Runts",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "underrun" %}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure because on {{ hostname }} {{ interface }} due to {{ failure }} underruns",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} {{ interface }} due to {{ failure}} underrun",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Underrun",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- else %}
+{%- if test == "state"%}
+{
+  "roomId": "{{ roomid }}",
+  "markdown": "# nxpydocs has detected a failure on {{ hostname }} because on {{ interface }} duplex is {{ failure }}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://devnetdan.files.wordpress.com/2021/05/pronounce-pyats.jpeg"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "nxpydocs tests",
+                            "weight": "lighter",
+                            "color": "accent"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Webex from nxpydocs tests due to a failure on {{ hostname }} interface {{ interface }} duplex is {{ failure}}",
+                            "horizontalAlignment": "Left",
+                            "wrap": true,
+                            "color": "Light",
+                            "size": "Large",
+                            "spacing": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 25,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Hostname",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Interface",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "Duplex",
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ hostname }}",
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ interface }}",
+                            "color": "Light"
+                        },                        
+                        {
+                            "type": "TextBlock",
+                            "text": "{{ failure }}",
+                            "color": "Light"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Padding",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This data comes from the Show Interface command on {{ hostname }} transformed into JSON and tested with pyATS",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Resources:"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://developer.webex.com/images/link-icon.png",
+                            "size": "Small",
+                            "width": "30px"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[GitHub Repository Raw JSON](https://github.com/automateyournetwork/nxpydocs_output/blob/main/JSON/switch%20show%20interface.json)",
+                            "horizontalAlignment": "Left",
+                            "size": "Medium"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "horizontalAlignment": "Left",
+                    "spacing": "Small"
+                    }                           
+            ]
+            }                
+        ],
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "url": "https://youtu.be/rPY3oTIaEM0",
+              "title": "Watch the development of this functionality on YouTube"
+            }
+          ]        
+        }
+        }
+    ]
+}
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}
